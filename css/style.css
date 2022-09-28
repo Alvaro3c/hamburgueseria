@@ -1,0 +1,9 @@
+@import url(reset.css);
+/* importamos el reset de Eric Meyer con import  */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* fuente monserrat en 400, y la hanley */
