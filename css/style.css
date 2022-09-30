@@ -260,7 +260,7 @@ main section .underline {
     width: 6.250em;
     margin: 0 auto;
     color: var(--colorprincipal);
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -275,15 +275,86 @@ main section .underline hr {
     border-color: var(--colorprincipal);
 }
 
+main section .grid {
+    display: flex;
+    /*  flex-direction: column; */
+    flex-wrap: wrap;
+
+}
+
+main section .grid article {
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+    /* padding por arriba y por abajo. funcionan por pares. i.e si quisiera otro resultado tendria que añadir un tercer valor */
+}
+
+main section article div>.fa-solid {
+    border: 1px solid var(--colorprincipal);
+    padding: 0.75em;
+    color: var(--colorprincipal);
+    font-size: 120%;
+}
+
+main section article h3 {
+    font-weight: 700;
+    font-size: 110%;
+    margin: 0.625em 0em;
+}
+
+main section p {
+    /* todos los p tienen las mismas caracteristicas */
+    color: #666;
+    line-height: 1.25;
+    /*  parte de la base de la fuente que estemos usando. Al haberlo hecho en ems, si ponemos 1 em, no va a haber cambio. line height es un valor porcentual, por lo que no hay que poner medidas. */
+    font-size: 95%;
+}
+
+main section article p {
+    margin-bottom: 0.5em;
+
+}
+
+.enlace {
+
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--colorprincipal)
+}
+
+.fa-truck {
+    transform: rotateY(180deg)
+}
+
+.fa-arrow-right {
+    color: var(--colorprincipal);
+}
 
 /* fin our service */
 
 /* mediasqueries */
 
 @media(min-width: 37.5em) {
-    /* 600px tablet */
 
+    /* 600px tablet */
+    main section .grid article {
+        width: 50%;
+        border-bottom: 0px solid #aaa;
+        padding: 1.5em;
+        border-left: 1px solid #aaa;
+        margin-top: 1em;
+        /* esto es para separar el 1 del 3 */
+
+
+        /* padding por arriba y por abajo. funcionan por pares. i.e si quisiera otro resultado tendria que añadir un tercer valor */
+    }
+
+    main section .grid article:last-child {
+        width: 100%;
+    }
 }
+
+
 
 @media(min-width: 48em) {
 
@@ -294,6 +365,12 @@ main section .underline hr {
 
     footer {
         text-align: left;
+    }
+
+    main section .grid :is(article, article:last-child) {
+        width: 33.333%;
+
+
     }
 
 }
