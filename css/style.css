@@ -332,6 +332,54 @@ main section article p {
 
 /* fin our service */
 
+/* principio About us */
+
+main #aboutus {
+    margin-bottom: 4.375em;
+}
+
+main section .flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5em;
+}
+
+main section .flex h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main section .flex h4 {
+    color: var(--colorprincipal);
+    margin: var(--margingrid) 0;
+}
+
+main section .flex .imagen {
+    width: 90%;
+    margin: 2.5 auto;
+    padding: 1.5em;
+}
+
+main section .flex .imagen .marco {
+    /* si una etiqueta tiene un class, no pone el nombre de la etiqueta */
+    /* rotacion del marco */
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main section .flex .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .flex .imagen:hover :is(.marco, .marco img) {
+    transform: rotateZ(0deg);
+}
+
+
+/* fin About us */
+
 /* mediasqueries */
 
 @media(min-width: 37.5em) {
@@ -352,6 +400,16 @@ main section article p {
     main section .grid article:last-child {
         width: 100%;
     }
+
+    main section .flex {
+        flex-direction: row;
+
+    }
+
+    main section .flex .imagen {
+        margin: 0 2.5;
+    }
+
 }
 
 
