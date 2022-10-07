@@ -1,0 +1,254 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+
+
+
+
+/*
+ 
+  font-family: 'Handlee', cursive;
+  font-family: 'Montserrat', sans-serif;
+  color_principal; #fa573a;
+  color_azul: #21242e;
+
+  */
+
+
+
+html {
+    /* para generar animaciones por css en los enlaces de ancla*/
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 68.75em;
+    --fuentehandlee: 'Handlee', 'cursive';
+}
+
+
+
+body {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-family: var(--fuenteprincipal);
+    padding: 0em 1.5em;
+
+    justify-content: center;
+
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* margin: 0 5%; */
+
+
+}
+
+
+/* header start */
+
+
+
+.title1 {
+    color: white;
+    font-family: var(--fuentetitulos);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 3em;
+
+}
+
+.title1 h1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    font-size: 1.5em;
+}
+
+.title1 span {
+    color: var(--colorprincipal);
+}
+
+
+
+header div .underline {
+    position: relative;
+    width: 4em;
+    margin: 0 auto;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    text-align: center;
+
+
+}
+
+header div .underline span {
+    position: absolute;
+    top: -0.5em;
+
+
+}
+
+header div .underline hr {
+    border-color: var(--colorprincipal);
+}
+
+nav {
+
+    max-width: 30em;
+    font-size: 1em;
+    padding-bottom: 2em;
+}
+
+nav li {
+
+    padding: 7px 15px;
+    font-size: 12px;
+}
+
+nav ul li:hover {
+    background-color: var(--colorprincipal);
+}
+
+
+/* header ends */
+
+
+/* main starts */
+
+main {
+    position: absolute;
+    margin: 0 10%;
+
+
+
+
+
+}
+
+.menu>h2 {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.menu hr {
+    width: 5em;
+    color: var(--colorprincipal);
+    margin-bottom: 10px;
+}
+
+.menu p {
+    padding: 0.5em 0em;
+    font-size: 11px;
+    margin-bottom: 10px;
+    line-height: 1.7em;
+}
+
+.menu article {
+    margin: 0 5%;
+
+}
+
+.menu article h2 {
+    font-weight: 700;
+    font-size: 14px;
+    padding: 1em 0em;
+}
+
+.menu article h2 span {
+    color: var(--colorprincipal);
+    padding: 0em 1em;
+}
+
+.menu article h3 {
+
+    font-size: 11px;
+}
+
+.menu article h4 {
+    color: var(--colorprincipal);
+    font-size: 12px;
+    padding: 2em 0em;
+    font-weight: 700;
+}
+
+
+
+.underline {
+    position: relative;
+    height: 2px;
+}
+
+.noshade {
+    position: absolute;
+    display: block;
+    width: 5em;
+    height: 2px;
+    background-color: var(--colorprincipal);
+    top: 0;
+
+    left: 0;
+}
+
+
+
+/* main ends */
+
+
+
+
+
+@media(min-width: 48em) {
+
+    /* 768px tablet grande o pantalla pequeña */
+    header .nav-top a span {
+        display: inline;
+    }
+
+    footer {
+        text-align: left;
+    }
+
+    main section .grid :is(article, article:last-child) {
+        width: 33.333%;
+
+
+    }
+
+}
+
+@media(min-width: 62.75em) {
+    /* 1004px pantallas  */
+
+    header nav .container .hamburguesa {
+        display: none;
+    }
+
+    header nav .container .menu {
+        width: auto;
+        text-align: left;
+    }
+
+    header nav .container .menu li a {
+        padding: 0em 1.25em;
+        border-bottom: 0px;
+    }
+
+    header nav .container .menu li {
+        display: inline-block;
+    }
+
+}
